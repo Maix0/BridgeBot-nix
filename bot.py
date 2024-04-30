@@ -20,7 +20,7 @@ async def send_copy_message(message: discord.Message, server_id, channel_id):
 @client.event
 async def on_message(message: discord.Message):
     if message.author.id == 1234963767566012427:
-        return os.getenv
+        return
     if message.channel.id == os.getenv('ID_CHANNEL_ONE'):
         await send_copy_message(message, os.getenv('ID_SERVEUR_TWO'), os.getenv('ID_CHANNEL_TWO'))
     elif message.channel.id == os.getenv('ID_CHANNEL_TWO'):
