@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import discord
 from discord import Intents, app_commands
 from discord.utils import get
@@ -30,4 +31,5 @@ async def on_message(message: discord.Message):
 async def on_ready():
     print("Ready!")
 
-client.run(os.getenv('TOKEN'))
+def main():
+    client.run(os.getenv('TOKEN'))

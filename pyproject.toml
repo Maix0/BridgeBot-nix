@@ -1,0 +1,7 @@
+[project]
+dependencies = ["discord.py", 'python-dotenv']
+name = "bridgebot"
+version = "0.0.1"
+
+[project.scripts]
+run = "bot:main"
