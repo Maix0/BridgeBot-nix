@@ -21,7 +21,7 @@
         pyApp = buildApp (import nixpkgs {inherit system;}).pkgs.python3Packages;
       in {
         packages.default = pyApp;
-        NixosModule = {
+        nixosModules.default = {
           config,
           lib,
           pkgs,
@@ -48,7 +48,8 @@
                 enable = true;
                 description = "";
                 serviceConfig = {
-                  Start = "${true}";
+                  Start = "${pyApp}/bin/run";
+                  EnvironementFile = config.service.bridgebot.envFile;
                 };
               };
             };
